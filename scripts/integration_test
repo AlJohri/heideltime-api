@@ -1,0 +1,7 @@
+#!/bin/sh
+
+server=http://localhost:8080
+
+curl -H "Content-Type: application/json" -X POST "$server/parse" -d "$(jq -n --arg tagger "none" --arg dct "2018-07-11" --arg text "$(cat sample.txt)" '{tagger: $tagger, dct: $dct, text: $text}')"
+curl -H "Content-Type: application/json" -X POST "$server/parse" -d "$(jq -n --arg tagger "stanford" --arg dct "2018-07-11" --arg text "$(cat sample.txt)" '{tagger: $tagger, dct: $dct, text: $text}')"
+curl -H "Content-Type: application/json" -X POST "$server/parse" -d "$(jq -n --arg tagger "tree" --arg dct "2018-07-11" --arg text "$(cat sample.txt)" '{tagger: $tagger, dct: $dct, text: $text}')"
