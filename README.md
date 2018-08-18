@@ -12,6 +12,8 @@ Components:
 
 ## Usage
 
+See [./scripts/integration_test](./scripts/integration_test) for usage.
+
 #### Docker
 
 ```
